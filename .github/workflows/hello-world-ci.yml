@@ -4,7 +4,15 @@ on:
   workflow_dispatch:
 
 jobs:
-  say-hello-to-me:
+  say-hello-inline-bash:
      runs-on: ubuntu-latest
      steps:
        - run: echo "Hello worlds"
+
+  say-hello-inline-python:
+     runs-on: ubuntu-latest
+     steps:
+       - name: Print hello work py
+         shell: python
+         run: |
+           print("Hello world from python")
