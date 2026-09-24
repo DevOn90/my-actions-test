@@ -23,8 +23,8 @@ jobs:
         - name: More complex bash script
           shell: bash
           run: |
-            export fname=John
-            export lname=Doe
+            export fname="John"
+            export lname="Doe"
             echo("${fname} ${lname}")
             
           
