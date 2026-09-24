@@ -1,0 +1,27 @@
+name: Path testing
+
+on: 
+  push:
+    branches:
+      - "development"
+    paths:
+      # Include files from path
+      - "filter_test/*.md"
+      # Exclude files from path
+      - "!filter_test/*.txt"
+
+jobs:
+   test-including-file:
+     runs-on: ubuntu-latest
+     steps:
+       - name: "Print file content"
+         shell: "bash"
+         working-directory: "filter_test/"
+         run: |
+           cat include-file.md || echo "Not possible for Include-file.md"
+           cat exclude-file.txt || echo "Not possible for Exclude-file.txt"
+           
+
+     
+   
+  
