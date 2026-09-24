@@ -16,3 +16,16 @@ jobs:
          shell: python
          run: |
            print("Hello world from python")
+
+  more-complex-bash-script:
+      runs-on: ubuntu-latest
+      steps:
+        - name: More complex bash script
+          shell: bash
+          run: |
+            export fname=John
+            export lname=Doe
+            echo("${fname} ${lname}")
+            
+          
+        
